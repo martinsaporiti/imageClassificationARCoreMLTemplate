@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29C1419D20C035F10086DE93 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		29ED30D120BF643300E8D5B1 /* ImageClassificationARkitCoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageClassificationARkitCoreML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29ED30D420BF643300E8D5B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29ED30D620BF643300E8D5B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 				29ED30DD20BF643500E8D5B1 /* LaunchScreen.storyboard */,
 				29ED30E620BF66AA00E8D5B1 /* Inceptionv3.mlmodel */,
 				29ED30E020BF643500E8D5B1 /* Info.plist */,
+				29C1419D20C035F10086DE93 /* README.md */,
 			);
 			path = ImageClassificationARkitCoreML;
 			sourceTree = "<group>";

@@ -19,23 +19,8 @@ class ViewController: UIViewController, ARSCNViewDelegate{
     
     private var requests = [VNRequest]()
     
-//    private lazy var cameraLayer: AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
-    
     // Create a session configuration
     let configuration = ARWorldTrackingConfiguration()
-    
-//    private lazy var captureSession: AVCaptureSession = {
-//        let session = AVCaptureSession()
-//        session.sessionPreset = AVCaptureSession.Preset.photo
-//        guard
-//            let backCamera = AVCaptureDevice.default(for: .video),
-//            let input = try? AVCaptureDeviceInput(device: backCamera)
-//            else { return session }
-//        session.addInput(input)
-//        return session
-//    }()
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +30,7 @@ class ViewController: UIViewController, ARSCNViewDelegate{
         self.sceneView.delegate = self
         self.resultText.alpha = 0.5
         // Create a new scene
-        let scene = SCNScene() // SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene()
         
         // Set the scene to the view
         self.sceneView.scene = scene
