@@ -41,6 +41,7 @@
 		29ED30C820BF643300E8D5B1 = {
 			isa = PBXGroup;
 			children = (
+				29C1419D20C035F10086DE93 /* README.md */,
 				29ED30D320BF643300E8D5B1 /* ImageClassificationARkitCoreML */,
 				29ED30D220BF643300E8D5B1 /* Products */,
 			);
@@ -64,7 +65,6 @@
 				29ED30DD20BF643500E8D5B1 /* LaunchScreen.storyboard */,
 				29ED30E620BF66AA00E8D5B1 /* Inceptionv3.mlmodel */,
 				29ED30E020BF643500E8D5B1 /* Info.plist */,
-				29C1419D20C035F10086DE93 /* README.md */,
 			);
 			path = ImageClassificationARkitCoreML;
 			sourceTree = "<group>";
