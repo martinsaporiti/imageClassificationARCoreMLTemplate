@@ -22,10 +22,13 @@ class ViewController: UIViewController, ARSCNViewDelegate{
     // Create a session configuration
     let configuration = ARWorldTrackingConfiguration()
     
+    let dispatchQueueML = DispatchQueue(label: "com.hw.dispatchqueueml")
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.sceneView.showsStatistics = true
+//        self.sceneView.showsStatistics = true
         self.sceneView.session.run(configuration);
         self.sceneView.delegate = self
         self.resultText.alpha = 0.5
@@ -37,6 +40,7 @@ class ViewController: UIViewController, ARSCNViewDelegate{
         
         self.setUpVision()
         self.updateCoreML()
+        self.loopCoreMLUpdate()
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,9 +74,18 @@ class ViewController: UIViewController, ARSCNViewDelegate{
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: TimeInterval) {
-        self.updateCoreML()
+//        self.updateCoreML()
     }
 
+    
+    func loopCoreMLUpdate() {
+        dispatchQueueML.async {
+            // 1. Run Update.
+            self.updateCoreML()
+            // 2. Loop this function.
+            self.loopCoreMLUpdate()
+        }
+    }
     
     
     func updateCoreML() {
